@@ -39,7 +39,11 @@ function App() {
   };
 
   if (!quiz.length) {
-    return <h3>Loading....</h3>;
+    return (
+      <div className="spinner-container">
+        <h2>Loading ...</h2>
+      </div>
+    );
   }
 
   if (showResult) {
