@@ -1,3 +1,5 @@
+import React from "react";
+
 export type Quiz = {
   category: string;
   correct_answer: string;
@@ -11,4 +13,10 @@ export type QuestionType = {
   question: string;
   answer: string;
   options: string[];
+};
+
+export type questionPropsType = {
+  question: string;
+  options: string[];
+  callback: (e: React.FormEvent<EventTarget>, ans: string) => void;
 };

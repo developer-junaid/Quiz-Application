@@ -1,38 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: aliceblue;
+}
+
 .App {
-  text-align: center;
+  width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-heading {
+  width: 100%;
+  margin: 30px 40%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.question-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  background-color: white;
+  width: 600px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  margin: 20px auto;
+  padding: 50px;
+  box-shadow: 3px 3px 10px grey;
+  border-radius: 20px;
+}
+
+.question {
+  margin:  20px 0;
+}
+
+.options {
+  margin: 10px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.submit-btn {
+  padding: 12px;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid gray;
+  margin: 20px auto;
+  background: rgba(76, 76, 177, 0.712);
+  width: 200px;
   color: white;
+  font-size: 20px;
+  align-self: center;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.submit-btn:hover {
+    background: rgb(76, 76, 177);
 }
