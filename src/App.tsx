@@ -1,13 +1,17 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import { getQuizDetails } from "./services/quiz_service";
+import { Quiz } from "./types/quiz_types";
 
 function App() {
+  // Quiz State
+  const [quiz, setQuiz] = useState<Quiz[]>([]);
+
   useEffect(() => {
-    // Async function
     async function fetchData() {
-      const questions = await getQuizDetails(5, "easy");
+      const questions: Quiz[] = await getQuizDetails(5, "easy");
       console.log(questions);
+      setQuiz(questions);
     }
 
     fetchData();
