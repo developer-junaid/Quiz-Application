@@ -9,6 +9,7 @@ function App() {
   let [quiz, setQuiz] = useState<QuestionType[]>([]);
   let [step, setStep] = useState(0);
   let [score, setScore] = useState(0);
+  let [showResult, setShoeResult] = useState(false);
 
   useEffect(() => {
     async function fetchData() {
@@ -33,14 +34,26 @@ function App() {
     if (step !== quiz.length - 1) {
       setStep(++step);
     } else {
-      alert(`Your score is : ${score} out of ${quiz.length}`);
-      setStep(0);
-      setScore(0);
+      setShoeResult(true);
     }
   };
 
   if (!quiz.length) {
     return <h3>Loading....</h3>;
+  }
+
+  if (showResult) {
+    return (
+      <div className="question-container result-container">
+        <div>
+          <h2>Result</h2>
+        </div>
+        <p className="result-text">
+          {" "}
+          Your score is : <b>{score}</b> out of <b>{quiz.length}</b>
+        </p>
+      </div>
+    );
   }
 
   return (
