@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import "./App.css";
 import { getQuizDetails } from "./services/quiz_service";
 import { QuestionType } from "./types/quiz_types";
 import QuestionCard from "./components/QuestionCard";
 import CircularProgress from "@material-ui/core/CircularProgress";
+import InputCard from "./components/InputCard";
+import { InputProvider } from "./context/InputContext";
+import { InputContext } from "./context/InputContext";
 
 function App() {
   // Quiz State
@@ -11,6 +14,9 @@ function App() {
   let [step, setStep] = useState(0);
   let [score, setScore] = useState(0);
   let [showResult, setShoeResult] = useState(false);
+
+  // Use context
+  let [inputSubmitted, setInputSubmitted] = useContext(InputContext);
 
   useEffect(() => {
     async function fetchData() {
@@ -39,6 +45,12 @@ function App() {
     }
   };
 
+  // Create handleInputSubmit function
+  const handleInputSubmit = (e: React.FormEvent<EventTarget>) => {
+    e.preventDefault();
+    setInputSubmitted(true);
+  };
+
   // Loading
   if (!quiz.length) {
     return (
@@ -63,14 +75,20 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <h1 className="main-heading">Quiz Application</h1>
-      <QuestionCard
-        options={quiz[step].options}
-        question={quiz[step].question}
-        callback={handleSubmit}
-      />
-    </div>
+    <InputProvider>
+      <div className="App">
+        <h1 className="main-heading">Quiz Application</h1>
+        {inputSubmitted ? (
+          <QuestionCard
+            options={quiz[step].options}
+            question={quiz[step].question}
+            callback={handleSubmit}
+          />
+        ) : (
+          <InputCard callback={handleInputSubmit} />
+        )}
+      </div>
+    </InputProvider>
   );
 }
 
