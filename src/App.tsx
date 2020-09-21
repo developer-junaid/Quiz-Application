@@ -3,6 +3,7 @@ import "./App.css";
 import { getQuizDetails } from "./services/quiz_service";
 import { QuestionType } from "./types/quiz_types";
 import QuestionCard from "./components/QuestionCard";
+import CircularProgress from "@material-ui/core/CircularProgress";
 
 function App() {
   // Quiz State
@@ -38,10 +39,11 @@ function App() {
     }
   };
 
+  // Loading
   if (!quiz.length) {
     return (
       <div className="spinner-container">
-        <h2>Loading ...</h2>
+        <CircularProgress color="inherit" />
       </div>
     );
   }

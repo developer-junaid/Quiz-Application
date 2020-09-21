@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import { questionPropsType } from "./../types/quiz_types";
+import Radio from "@material-ui/core/Radio";
+import RadioGroup from "@material-ui/core/RadioGroup";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import FormControl from "@material-ui/core/FormControl";
 
 const QuestionCard: React.FC<questionPropsType> = ({
   question,
@@ -14,6 +18,11 @@ const QuestionCard: React.FC<questionPropsType> = ({
     setSelectedAns(event.target.value);
   };
 
+  // Radio
+  const handleChange = (event) => {
+    setSelectedAns(event.target.value);
+  };
+
   return (
     <div className="question-container ">
       <div className="question">
@@ -25,23 +34,29 @@ const QuestionCard: React.FC<questionPropsType> = ({
         action=""
         onSubmit={(e: React.FormEvent<EventTarget>) => callback(e, selectedAns)}
       >
-        {options.map((option, index) => {
-          return (
-            <div key={index}>
-              <label className="options">
-                <input
-                  type="radio"
-                  name="option"
-                  required
-                  checked={selectedAns === option}
-                  value={option}
-                  onChange={handleSelect}
-                />
-                {option}
-              </label>
-            </div>
-          );
-        })}
+        <FormControl component="fieldset">
+          <RadioGroup
+            aria-label="option"
+            name="option"
+            value={selectedAns}
+            onChange={handleChange}
+          >
+            {options.map((option, index) => {
+              return (
+                <div key={index}>
+                  <FormControlLabel
+                    value={option}
+                    required
+                    control={<Radio required={true} />}
+                    label={option}
+                  />
+
+                  {/* <input  onChange={handleSelect} /> */}
+                </div>
+              );
+            })}
+          </RadioGroup>
+        </FormControl>
         <input className="submit-btn" type="submit" />
       </form>
     </div>
