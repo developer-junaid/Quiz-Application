@@ -4,8 +4,8 @@ export const InputContext = createContext();
 
 export const InputProvider = (props) => {
   // Input States
-  const [questions, setQuestions] = useState("");
-  const [level, setLevel] = useState("");
+  const [questions, setQuestions] = useState(10);
+  const [level, setLevel] = useState("easy");
   const [inputSubmitted, setInputSubmitted] = useState(false);
 
   

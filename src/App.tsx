@@ -16,16 +16,26 @@ function App() {
   let [showResult, setShoeResult] = useState(false);
 
   // Use context
-  let [inputSubmitted, setInputSubmitted] = useContext(InputContext);
+  let [
+    questions,
+    setQuestions,
+    level,
+    setLevel,
+    inputSubmitted,
+    setInputSubmitted,
+  ] = useContext(InputContext);
 
   useEffect(() => {
     async function fetchData() {
-      const questions: QuestionType[] = await getQuizDetails(5, "easy");
-      setQuiz(questions);
+      const totalQuestions: QuestionType[] = await getQuizDetails(
+        questions,
+        level
+      );
+      setQuiz(totalQuestions);
     }
-
+    console.log("fron useEffect", questions);
     fetchData();
-  }, []);
+  }, [questions, level]);
 
   // Create handleSubmit function
   const handleSubmit = (e: React.FormEvent<EventTarget>, userAns: string) => {
@@ -33,7 +43,6 @@ function App() {
 
     const currentQuestion: QuestionType = quiz[step];
 
-    console.log(userAns, currentQuestion.answer);
     if (userAns === currentQuestion.answer) {
       setScore(++score);
     }

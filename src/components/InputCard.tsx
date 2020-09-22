@@ -19,6 +19,8 @@ const InputCard: React.FC<inputPropsType> = ({ callback }) => {
     setLevel(event.target.value);
   };
 
+
+
   return (
     <div className="input-card-container">
       <h2>Select no of questions and difficulty level :</h2>
