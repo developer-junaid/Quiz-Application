@@ -16,6 +16,7 @@ function App() {
   let [showResult, setShoeResult] = useState(false);
   let [questions, setQuestions] = useState(5);
   let [level, setLevel] = useState("easy");
+  let [category, setCategory] = useState(9);
 
   // Use context
   let [inputSubmitted, setInputSubmitted] = useContext(InputContext);
@@ -24,13 +25,13 @@ function App() {
     async function fetchData() {
       const totalQuestions: QuestionType[] = await getQuizDetails(
         questions,
+        category,
         level
       );
       setQuiz(totalQuestions);
     }
-    console.log("fron useEffect", questions, level);
     fetchData();
-  }, [questions, level]);
+  }, [questions, category, level]);
 
   // Create handleSubmit function
   const handleSubmit = (e: React.FormEvent<EventTarget>, userAns: string) => {
@@ -81,7 +82,7 @@ function App() {
   return (
     <InputProvider>
       <div className="App">
-        <h1 className="main-heading">Quiz Application</h1>
+        <h1 className="main-heading">Online Quiz Application</h1>
         {inputSubmitted ? (
           <QuestionCard
             options={quiz[step].options}
@@ -93,6 +94,8 @@ function App() {
             questions={questions}
             setQuestions={setQuestions}
             level={level}
+            category={category}
+            setCategory={setCategory}
             setLevel={setLevel}
             callback={handleInputSubmit}
           />
