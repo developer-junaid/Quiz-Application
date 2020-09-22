@@ -7,9 +7,8 @@ import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";   
 import { InputContext } from "../context/InputContext";
 
-const InputCard: React.FC<inputPropsType> = ({ callback }) => {
+const InputCard: React.FC<inputPropsType> = ({questions, setQuestions, level, setLevel, callback }) => {
   // use Context
-  let [questions, setQuestions, level, setLevel] = useContext(InputContext);
 
   const handleQuestionChange = (event) => {
     setQuestions(event.target.value);

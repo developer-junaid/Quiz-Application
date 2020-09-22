@@ -14,16 +14,11 @@ function App() {
   let [step, setStep] = useState(0);
   let [score, setScore] = useState(0);
   let [showResult, setShoeResult] = useState(false);
+  let [questions, setQuestions] = useState(5);
+  let [level, setLevel] = useState("easy");
 
   // Use context
-  let [
-    questions,
-    setQuestions,
-    level,
-    setLevel,
-    inputSubmitted,
-    setInputSubmitted,
-  ] = useContext(InputContext);
+  let [inputSubmitted, setInputSubmitted] = useContext(InputContext);
 
   useEffect(() => {
     async function fetchData() {
@@ -33,7 +28,7 @@ function App() {
       );
       setQuiz(totalQuestions);
     }
-    console.log("fron useEffect", questions);
+    console.log("fron useEffect", questions, level);
     fetchData();
   }, [questions, level]);
 
@@ -94,7 +89,13 @@ function App() {
             callback={handleSubmit}
           />
         ) : (
-          <InputCard callback={handleInputSubmit} />
+          <InputCard
+            questions={questions}
+            setQuestions={setQuestions}
+            level={level}
+            setLevel={setLevel}
+            callback={handleInputSubmit}
+          />
         )}
       </div>
     </InputProvider>
