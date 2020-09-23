@@ -9,6 +9,8 @@ const QuestionCard: React.FC<questionPropsType> = ({
   question,
   options,
   callback,
+  totalQuestions,
+  currentQuestion,
 }) => {
   // Answer state
   let [selectedAns, setSelectedAns] = useState("");
@@ -25,6 +27,9 @@ const QuestionCard: React.FC<questionPropsType> = ({
 
   return (
     <div className="question-container ">
+      <div className="progress-bar">
+        Question: {++currentQuestion} / {totalQuestions}
+      </div>
       <div className="question">
         <h3>{question}</h3>
       </div>

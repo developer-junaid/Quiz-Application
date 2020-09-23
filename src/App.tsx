@@ -11,10 +11,10 @@ function App() {
   let [quiz, setQuiz] = useState<QuestionType[]>([]);
   let [step, setStep] = useState(0);
   let [score, setScore] = useState(0);
-  let [showResult, setShoeResult] = useState(false);
   let [questions, setQuestions] = useState(5);
   let [level, setLevel] = useState("easy");
   let [category, setCategory] = useState(9);
+  let [showResult, setShowResult] = useState(false);
   let [inputSubmitted, setInputSubmitted] = useState(false);
 
   useEffect(() => {
@@ -42,7 +42,7 @@ function App() {
     if (step !== quiz.length - 1) {
       setStep(++step);
     } else {
-      setShoeResult(true);
+      setShowResult(true);
     }
   };
 
@@ -50,6 +50,11 @@ function App() {
   const handleInputSubmit = (e: React.FormEvent<EventTarget>) => {
     e.preventDefault();
     setInputSubmitted(true);
+  };
+
+  // Handle Try again
+  const handleTryAgain = () => {
+    window.location.reload();
   };
 
   // Loading
@@ -70,7 +75,15 @@ function App() {
         <p className="result-text">
           {" "}
           Your score is : <b>{score}</b> out of <b>{quiz.length}</b>
+          <br />
+          Percentage : <b>{(score / quiz.length) * 100}%</b>
         </p>
+        <input
+          type="button"
+          onClick={handleTryAgain}
+          className="submit-btn"
+          value="Try Again"
+        />
       </div>
     );
   }
@@ -83,6 +96,8 @@ function App() {
           options={quiz[step].options}
           question={quiz[step].question}
           callback={handleSubmit}
+          totalQuestions={quiz.length}
+          currentQuestion={step}
         />
       ) : (
         <InputCard

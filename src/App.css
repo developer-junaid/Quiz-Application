@@ -7,13 +7,13 @@
 }
 
 body {
-  background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.2)), url("./images/book.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)),
+    url("./images/book.jpg");
   background-position: center;
   background-size: cover;
-  
+
   background-attachment: fixed;
   background-repeat: no-repeat;
-
 }
 
 /* App component */
