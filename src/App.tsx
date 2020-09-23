@@ -70,24 +70,30 @@ function App() {
   if (showResult) {
     return (
       <div className="App">
-        <h1 className="main-heading">Online Quiz Application</h1>
-
-        <div className="question-container result-container">
-          <div>
-            <h2>Result</h2>
+        <header>
+          <div className="header">
+            <h1 className="main-heading">Online Quiz Application</h1>
           </div>
-          <p className="result-text">
-            {" "}
-            Your score is : <b>{score}</b> out of <b>{quiz.length}</b>
-            <br />
-            Percentage : <b>{(score / quiz.length) * 100}%</b>
-          </p>
-          <input
-            type="button"
-            onClick={handleTryAgain}
-            className="submit-btn"
-            value="Try Again"
-          />
+          <hr />
+        </header>
+        <div className="content">
+          <div className="question-container result-container">
+            <div>
+              <h2>Result</h2>
+            </div>
+            <p className="result-text">
+              {" "}
+              Your score is : <b>{score}</b> out of <b>{quiz.length}</b>
+              <br />
+              Percentage : <b>{(score / quiz.length) * 100}%</b>
+            </p>
+            <input
+              type="button"
+              onClick={handleTryAgain}
+              className="submit-btn"
+              value="Try Again"
+            />
+          </div>
         </div>
         <Footer />
       </div>
@@ -96,9 +102,12 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="main-heading">Online Quiz Application</h1>
-      <hr />
-
+      <header>
+        <div className="header">
+          <h1 className="main-heading">Online Quiz Application</h1>
+        </div>
+        <hr />
+      </header>
       <div className="content">
         {inputSubmitted ? (
           <QuestionCard

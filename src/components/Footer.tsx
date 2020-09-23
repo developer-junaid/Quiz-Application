@@ -4,10 +4,13 @@ import "./../App.css";
 function Footer() {
   return (
     <div className="footer-container">
+      <div className="page-wrapper">
+        
+      </div>
       <hr />
-      <div className="page-wrapper"></div>
+
       <footer>
-        <div className="footer">
+        <div className="footer ">
           <div className="footer-content">
             <div className="footer-section about">
               <h1 className="logo-text"> &copy; Developer : Junaid Qureshi</h1>
