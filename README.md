@@ -1,4 +1,4 @@
-# Online Quiz Application 
+# :clipboard: Online Quiz Application 
 
 ### *An Online Quiz Application, built using React js and Typescript.*
 http://online-quiz-app.surge.sh/
