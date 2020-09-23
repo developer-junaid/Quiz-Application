@@ -5,6 +5,7 @@ import { QuestionType } from "./types/quiz_types";
 import QuestionCard from "./components/QuestionCard";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import InputCard from "./components/InputCard";
+import Footer from './components/Footer';
 
 function App() {
   // Quiz State
@@ -110,6 +111,7 @@ function App() {
           callback={handleInputSubmit}
         />
       )}
+      <Footer/>
     </div>
   );
 }

@@ -52,7 +52,7 @@ body {
   text-align: left;
   align-items: center;
   margin: 20px auto;
-  padding: 50px;
+  padding: 40px;
   box-shadow: 3px 3px 10px grey;
   border-radius: 20px;
 }
@@ -109,7 +109,7 @@ body {
   text-align: left;
   align-items: center;
   margin: 20px auto;
-  padding: 50px;
+  padding: 40px;
   box-shadow: 3px 3px 10px grey;
   border-radius: 20px;
 }
@@ -123,3 +123,93 @@ body {
 }
 
 /* END INPUT CARD*/
+
+/* FOOTER */
+.footer-container {
+  width: 100%;
+  font-family: Roboto;
+  margin-top: 20px;
+}
+
+/* FOOTER */
+.contact .email {
+  text-shadow: 2px 2px 2px black;
+  color: white;
+  position: relative;
+}
+
+.footer .footer-bottom {
+  background-color: #343a40;
+  color: #686868;
+  text-align: center;
+  height: 50px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  padding-top: 20px;
+}
+
+.footer .footer-content {
+  height: 200px;
+  display: flex;
+}
+
+.footer .footer-content .footer-section {
+  flex: 1;
+  padding: 25px;
+}
+
+.footer-para {
+  margin: 10px 0;
+}
+
+.footer .footer-content .about .contact span {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+.footer .footer-content .about .socials a {
+  border: 1px solid gray;
+  width: 45px;
+  background-color: rgba(81, 81, 190, 0.699);
+  height: 38px;
+  padding-top: 5px;
+  margin-right: 5px;
+  text-align: center;
+  display: inline-block;
+  font-size: 1.3em;
+  text-decoration: none;
+  color: white;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.footer .footer-content .about .socials a:hover {
+  border: 1px solid white;
+  background: rgba(76, 76, 177, 0.932);
+
+  transition: all 0.3s;
+}
+
+.footer-section {
+  text-align: center;
+}
+
+.logo-text {
+  font-variant: initial;
+}
+
+.logo-text .logo-span {
+  color: rgb(226, 206, 142);
+}
+
+.footer .footer-content h1 {
+  color: rgba(211, 178, 72, 0.986);
+  width: 100%;
+  text-shadow: 2px 2px 2px black;
+}
+.page-wrapper {
+  min-height: 100%;
+}
