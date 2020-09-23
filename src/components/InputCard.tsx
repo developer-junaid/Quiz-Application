@@ -17,7 +17,7 @@ const InputCard: React.FC<inputPropsType> = ({
 }) => {
   return (
     <div className="input-card-container">
-      <h2>Select configurations</h2>
+      <div className='configuration-heading'>Select configurations</div>
       <div className="select">
         <form
           className="question-form"

@@ -72,7 +72,7 @@ function App() {
       <div className="App">
         <header>
           <div className="header">
-            <h1 className="main-heading">Online Quiz Application</h1>
+            <div className="main-heading">Online Quiz Application</div>
           </div>
           <hr />
         </header>

@@ -27,6 +27,7 @@ body {
 .main-heading {
   color: rgb(199, 159, 30);
   width: 100%;
+  font-size: 30px;
   margin: 20px 0;
   text-shadow: 2px 2px 2px black;
 }
@@ -119,6 +120,11 @@ body {
   border-radius: 20px;
 }
 
+.configuration-heading {
+  font-weight: 500;
+  font-size: 23px;
+}
+
 .questions-dropdown {
   margin: 30px 0;
   width: 100%;
@@ -157,9 +163,9 @@ body {
   padding: 25px;
 }
 
-.footer .footer-content h1 {
+.footer .footer-content .logo-text {
   color: rgba(196, 160, 41, 0.89);
-
+  font-size: 25px;
   text-shadow: 2px 2px 2px black;
 }
 
@@ -167,7 +173,7 @@ body {
   margin: 10px 0;
 }
 
-.footer .footer-content .about .contact span {
+.footer .footer-content .about .contact .email {
   display: block;
   margin-bottom: 8px;
   font-size: 1.1em;
@@ -212,4 +218,103 @@ body {
 
 .page-wrapper {
   min-height: 90px;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 700px) {
+  .main-heading {
+    font-size: 25px;
+  }
+  .footer .footer-content .logo-text {
+    font-size: 17px;
+  }
+
+  .footer .footer-content .about .contact .email {
+    font-size: 12px;
+  }
+
+  .footer .footer-content .about .socials a {
+    width: 40px;
+    height: 30px;
+    padding-top: 3px;
+    margin-right: 5px;
+    font-size: 1.1em;
+  }
+
+  .input-card-container {
+    max-width: 450px;
+  }
+
+  .question-container {
+    max-width: 450px;
+  }
+
+  .question {
+    font-size: 14px;
+  }
+
+  .submit-btn {
+    font-size: 18px;
+  }
+
+  .configuration-heading {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .main-heading {
+    font-size: 20px;
+  }
+
+  body {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)),
+      url("./images/mobile.jpg");
+      background-position: center;
+      background-size: cover;
+      height: 100%;
+      width: 100%;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+  }
+  .submit-btn {
+    font-size: 14px;
+  }
+
+  .input-card-container {
+    max-width: 350px;
+  }
+
+  .question-container {
+    max-width: 350px;
+  }
+
+  .configuration-heading {
+    font-size: 16px;
+  }
+  .question {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .submit-btn {
+    font-size: 14px;
+  }
+
+  .input-card-container {
+    max-width: 300px;
+  }
+
+  .question-container {
+    max-width: 300px;
+  }
+
+  .configuration-heading {
+    font-size: 16px;
+  }
+  .question {
+    font-size: 13px;
+  }
 }

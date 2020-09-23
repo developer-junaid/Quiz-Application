@@ -13,7 +13,7 @@ function Footer() {
         <div className="footer ">
           <div className="footer-content">
             <div className="footer-section about">
-              <h1 className="logo-text"> &copy; Developer : Junaid Qureshi</h1>
+              <div className="logo-text"> &copy; Developer : Junaid Qureshi</div>
 
               <div className="contact">
                 <span className="email">
