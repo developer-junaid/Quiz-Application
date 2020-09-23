@@ -1,12 +1,10 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import { getQuizDetails } from "./services/quiz_service";
 import { QuestionType } from "./types/quiz_types";
 import QuestionCard from "./components/QuestionCard";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import InputCard from "./components/InputCard";
-import { InputProvider } from "./context/InputContext";
-import { InputContext } from "./context/InputContext";
 
 function App() {
   // Quiz State
@@ -17,9 +15,7 @@ function App() {
   let [questions, setQuestions] = useState(5);
   let [level, setLevel] = useState("easy");
   let [category, setCategory] = useState(9);
-
-  // Use context
-  let [inputSubmitted, setInputSubmitted] = useContext(InputContext);
+  let [inputSubmitted, setInputSubmitted] = useState(false);
 
   useEffect(() => {
     async function fetchData() {
@@ -80,28 +76,26 @@ function App() {
   }
 
   return (
-    <InputProvider>
-      <div className="App">
-        <h1 className="main-heading">Online Quiz Application</h1>
-        {inputSubmitted ? (
-          <QuestionCard
-            options={quiz[step].options}
-            question={quiz[step].question}
-            callback={handleSubmit}
-          />
-        ) : (
-          <InputCard
-            questions={questions}
-            setQuestions={setQuestions}
-            level={level}
-            category={category}
-            setCategory={setCategory}
-            setLevel={setLevel}
-            callback={handleInputSubmit}
-          />
-        )}
-      </div>
-    </InputProvider>
+    <div className="App">
+      <h1 className="main-heading">Online Quiz Application</h1>
+      {inputSubmitted ? (
+        <QuestionCard
+          options={quiz[step].options}
+          question={quiz[step].question}
+          callback={handleSubmit}
+        />
+      ) : (
+        <InputCard
+          questions={questions}
+          setQuestions={setQuestions}
+          level={level}
+          category={category}
+          setCategory={setCategory}
+          setLevel={setLevel}
+          callback={handleInputSubmit}
+        />
+      )}
+    </div>
   );
 }
 

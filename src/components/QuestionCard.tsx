@@ -14,12 +14,12 @@ const QuestionCard: React.FC<questionPropsType> = ({
   let [selectedAns, setSelectedAns] = useState("");
 
   // Handle Selection
-  const handleSelect = (event: any) => {
+  const handleSelect = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedAns(event.target.value);
   };
 
   // Radio
-  const handleChange = (event) => {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedAns(event.target.value);
   };
 
@@ -46,7 +46,6 @@ const QuestionCard: React.FC<questionPropsType> = ({
                 <div key={index}>
                   <FormControlLabel
                     value={option}
-                    required
                     control={<Radio required={true} />}
                     label={option}
                   />
@@ -57,7 +56,11 @@ const QuestionCard: React.FC<questionPropsType> = ({
             })}
           </RadioGroup>
         </FormControl>
-        <input className="submit-btn" type="submit" />
+        <input
+          className="submit-btn"
+          type="submit"
+          value="Submit and Proceed"
+        />
       </form>
     </div>
   );

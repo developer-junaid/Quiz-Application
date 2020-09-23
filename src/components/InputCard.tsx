@@ -5,7 +5,6 @@ import MenuItem from "@material-ui/core/MenuItem";
 import { inputPropsType } from "./../types/quiz_types";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
-import { InputContext } from "../context/InputContext";
 
 const InputCard: React.FC<inputPropsType> = ({
   questions,
@@ -16,24 +15,6 @@ const InputCard: React.FC<inputPropsType> = ({
   setLevel,
   callback,
 }) => {
-  // use Context
-
-  const handleQuestionChange = (
-    event: React.ChangeEvent<HTMLSelectElement>
-  ) => {
-    setQuestions(event.target.value);
-  };
-
-  const handleLevelChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setLevel(event.target.value);
-  };
-
-  const handleCategoryChange = (
-    event: React.ChangeEvent<HTMLSelectElement>
-  ) => {
-    setCategory(event.target.value);
-  };
-
   return (
     <div className="input-card-container">
       <h2>Select configurations</h2>
@@ -54,7 +35,8 @@ const InputCard: React.FC<inputPropsType> = ({
                 labelId="demo-simple-select-outlined-label"
                 id="demo-simple-select-outlined"
                 value={category}
-                onChange={handleCategoryChange}
+                defaultValue={category}
+                onChange={(event) => setCategory(Number(event.target.value))}
                 required
                 label="Category"
               >
@@ -76,7 +58,7 @@ const InputCard: React.FC<inputPropsType> = ({
                 labelId="demo-simple-select-outlined-label"
                 id="demo-simple-select-outlined"
                 value={questions}
-                onChange={handleQuestionChange}
+                onChange={(event) => setQuestions(Number(event.target.value))}
                 required
                 label="Questions"
               >
@@ -96,7 +78,7 @@ const InputCard: React.FC<inputPropsType> = ({
                 labelId="demo-simple-select-outlined-label"
                 id="demo-simple-select-outlined"
                 value={level}
-                onChange={handleLevelChange}
+                onChange={(event) => setLevel(event.target.value as string)}
                 required
                 label="Questions"
               >

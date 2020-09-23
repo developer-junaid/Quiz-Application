@@ -22,5 +22,15 @@ export type questionPropsType = {
 };
 
 export type inputPropsType = {
-  callback: (e: React.FormEvent<EventTarget>,questions: number , level: string) => void;
+  questions: number;
+  category: number;
+  setCategory: (category: number) => void;
+  setQuestions: (questions: number) => void;
+  level: string;
+  setLevel: (level: string) => void;
+  callback: (
+    e: React.FormEvent<EventTarget>,
+    questions: number,
+    level: string
+  ) => void;
 };
