@@ -26,6 +26,7 @@ body {
 .main-heading {
   color: rgb(199, 159, 30);
   width: 100%;
+  margin: 20px 0;
   text-shadow: 2px 2px 2px black;
 }
 
@@ -43,6 +44,7 @@ body {
 /* END App */
 
 /* QUESTION CARD  */
+
 .question-container {
   display: flex;
   flex-direction: column;
@@ -108,8 +110,9 @@ body {
   justify-content: center;
   text-align: left;
   align-items: center;
-  margin: 20px auto;
+  margin: 5% auto;
   padding: 40px;
+
   box-shadow: 3px 3px 10px grey;
   border-radius: 20px;
 }
@@ -132,14 +135,12 @@ body {
 }
 
 /* FOOTER */
-.contact .email {
-  text-shadow: 2px 2px 2px black;
-  color: white;
+.footer {
+  height: 190px;
   position: relative;
 }
 
 .footer .footer-bottom {
-  background-color: #343a40;
   color: #686868;
   text-align: center;
   height: 50px;
@@ -155,9 +156,21 @@ body {
   display: flex;
 }
 
+.email {
+  color: white;
+  text-shadow: 2px 3px 2px black;
+}
+
 .footer .footer-content .footer-section {
   flex: 1;
   padding: 25px;
+}
+
+.footer .footer-content h1 {
+  color: rgba(196, 160, 41, 0.89);
+  
+  text-shadow: 2px 2px 2px black;
+
 }
 
 .footer-para {
@@ -166,14 +179,13 @@ body {
 
 .footer .footer-content .about .contact span {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   font-size: 1.1em;
 }
 
 .footer .footer-content .about .socials a {
   border: 1px solid gray;
   width: 45px;
-  background-color: rgba(81, 81, 190, 0.699);
   height: 38px;
   padding-top: 5px;
   margin-right: 5px;
@@ -181,15 +193,16 @@ body {
   display: inline-block;
   font-size: 1.3em;
   text-decoration: none;
-  color: white;
+  color: rgba(39, 39, 168, 0.932);
+  background-color: rgba(255, 255, 255, 0.555);
   border-radius: 5px;
   transition: all 0.3s;
 }
 
 .footer .footer-content .about .socials a:hover {
-  border: 1px solid white;
-  background: rgba(76, 76, 177, 0.932);
-
+  color: rgb(30, 30, 150);
+  border: 1px solid black;
+  background-color: white;
   transition: all 0.3s;
 }
 
@@ -199,17 +212,14 @@ body {
 
 .logo-text {
   font-variant: initial;
+  font-size: 25px;
+  margin-bottom: 10px;
 }
 
 .logo-text .logo-span {
-  color: rgb(226, 206, 142);
+  color: #ec4961;
 }
 
-.footer .footer-content h1 {
-  color: rgba(211, 178, 72, 0.986);
-  width: 100%;
-  text-shadow: 2px 2px 2px black;
-}
 .page-wrapper {
   min-height: 100%;
 }

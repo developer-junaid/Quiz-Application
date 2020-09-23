@@ -4,20 +4,16 @@ import "./../App.css";
 function Footer() {
   return (
     <div className="footer-container">
+      <hr />
       <div className="page-wrapper"></div>
       <footer>
         <div className="footer">
-          <hr />
-
           <div className="footer-content">
             <div className="footer-section about">
-              <h1 className="logo-text">
-                {" "}
-                &copy; | Designed By Junaid Qureshi
-              </h1>
-              <br />
+              <h1 className="logo-text"> &copy; Developer : Junaid Qureshi</h1>
+
               <div className="contact">
-                <span className='email'>
+                <span className="email">
                   <i className="fas fa-envelope"></i>&nbsp; qjunaid623@gmail.com
                 </span>
               </div>
@@ -36,13 +32,7 @@ function Footer() {
                 >
                   <i className="fab fa-linkedin"></i>
                 </a>
-                <a
-                  href="https://twitter.com/Junaid084869/"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <i className="fab fa-twitter"></i>
-                </a>
+
                 <a
                   href="https://github.com/developer-junaid"
                   rel="noopener noreferrer"
@@ -52,6 +42,8 @@ function Footer() {
                 </a>
               </div>
             </div>
+          </div>
+          <div className="footer-bottom">
           </div>
         </div>
       </footer>

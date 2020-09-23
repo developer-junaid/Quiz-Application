@@ -5,7 +5,7 @@ import { QuestionType } from "./types/quiz_types";
 import QuestionCard from "./components/QuestionCard";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import InputCard from "./components/InputCard";
-import Footer from './components/Footer';
+import Footer from "./components/Footer";
 
 function App() {
   // Quiz State
@@ -69,22 +69,27 @@ function App() {
 
   if (showResult) {
     return (
-      <div className="question-container result-container">
-        <div>
-          <h2>Result</h2>
+      <div className="App">
+        <h1 className="main-heading">Online Quiz Application</h1>
+
+        <div className="question-container result-container">
+          <div>
+            <h2>Result</h2>
+          </div>
+          <p className="result-text">
+            {" "}
+            Your score is : <b>{score}</b> out of <b>{quiz.length}</b>
+            <br />
+            Percentage : <b>{(score / quiz.length) * 100}%</b>
+          </p>
+          <input
+            type="button"
+            onClick={handleTryAgain}
+            className="submit-btn"
+            value="Try Again"
+          />
         </div>
-        <p className="result-text">
-          {" "}
-          Your score is : <b>{score}</b> out of <b>{quiz.length}</b>
-          <br />
-          Percentage : <b>{(score / quiz.length) * 100}%</b>
-        </p>
-        <input
-          type="button"
-          onClick={handleTryAgain}
-          className="submit-btn"
-          value="Try Again"
-        />
+        <Footer />
       </div>
     );
   }
@@ -92,26 +97,31 @@ function App() {
   return (
     <div className="App">
       <h1 className="main-heading">Online Quiz Application</h1>
-      {inputSubmitted ? (
-        <QuestionCard
-          options={quiz[step].options}
-          question={quiz[step].question}
-          callback={handleSubmit}
-          totalQuestions={quiz.length}
-          currentQuestion={step}
-        />
-      ) : (
-        <InputCard
-          questions={questions}
-          setQuestions={setQuestions}
-          level={level}
-          category={category}
-          setCategory={setCategory}
-          setLevel={setLevel}
-          callback={handleInputSubmit}
-        />
-      )}
-      <Footer/>
+      <hr />
+
+      <div className="content">
+        {inputSubmitted ? (
+          <QuestionCard
+            options={quiz[step].options}
+            question={quiz[step].question}
+            callback={handleSubmit}
+            totalQuestions={quiz.length}
+            currentQuestion={step}
+          />
+        ) : (
+          <InputCard
+            questions={questions}
+            setQuestions={setQuestions}
+            level={level}
+            category={category}
+            setCategory={setCategory}
+            setLevel={setLevel}
+            callback={handleInputSubmit}
+          />
+        )}
+      </div>
+
+      <Footer />
     </div>
   );
 }
