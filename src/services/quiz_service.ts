@@ -1,4 +1,4 @@
-import { Quiz, QuestionType } from "./../types/quiz_types";
+import { Quiz, QuestionType } from "../types/quiz_types";
 
 // Shuffle Answers functions
 const shuffleAnswers = (array: any[]) =>

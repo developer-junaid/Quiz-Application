@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import { getQuizDetails } from "./services/quiz_service";
 import { QuestionType } from "./types/quiz_types";
-import QuestionCard from "./components/QuestionCard";
+import QuestionCard from "./components2/QuestionCard";
 import CircularProgress from "@material-ui/core/CircularProgress";
-import InputCard from "./components/InputCard";
-import Footer from "./components/Footer";
+import InputCard from "./components2/InputCard";
+import Footer from "./components2/Footer";
 
 function App() {
   // Quiz State
