@@ -1,9 +1,10 @@
 .footer-container {
   display: flex;
-  height: 8vh;
+  height: 12vh;
   border-top: 1px solid rgba(145, 104, 28, 0.89);
   width: 80%;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
   color: #d2d4dd;
 }
@@ -11,5 +12,45 @@
 .footer-container h1 {
   font-size: 1rem;
   font-variant: initial;
+}
+
+.icons-container {
+  display: flex;
+  width: 8rem;
+  height: 60%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.icons-container i {
+  font-size: 1.7rem;
+  transition: 0.3s ease-in-out;
+}
+
+.icons-container a {
+  text-decoration: none;
+}
+
+.icons-container i:hover {
+  transform: translateY(-2px);
+  box-shadow: 1px 1px 6px gray;
+}
+
+.github {
+  color: black;
+  background: #d2d4dd;
+  line-height: 0.8;
+}
+
+.linkedin {
+  color: #0e76a8;
+  line-height: 0.7;
+  background: #d2d4dd;
+}
+
+.portfolio {
+  line-height: 0.7;
+  color: #00630a;
+  background: #d2d4dd;
 }
 /*# sourceMappingURL=footer.css.map */
