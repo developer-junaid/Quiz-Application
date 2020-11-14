@@ -1,9 +1,13 @@
 .content-container {
   display: flex;
-  height: 80vh;
-  border: 1px solid black;
+  height: 90vh;
   width: 100%;
   justify-content: center;
   align-items: center;
+  color: #ececec;
+}
+
+.content-container h1 {
+  font-size: 1.3rem;
 }
 /*# sourceMappingURL=content.css.map */

@@ -14,12 +14,13 @@
 body {
   min-height: 100vh;
   width: 100%;
+  background-image: url("./../../images/black-laptop.jpg");
+  background-size: cover;
 }
 
 .main-container {
-  height: 100vh;
+  height: 110vh;
   width: 100%;
-  border: 2px solid black;
   display: flex;
   flex-direction: column;
   justify-content: center;

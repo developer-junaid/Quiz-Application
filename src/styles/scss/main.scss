@@ -1,10 +1,8 @@
 @import "./resets";
-@import "./variables";
 
 .main-container {
-  height: 100vh;
+  height: 110vh;
   width: 100%;
-  border: 2px solid black;
   display: flex;
   flex-direction: column;
   justify-content: center;

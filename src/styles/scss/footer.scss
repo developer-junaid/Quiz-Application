@@ -1,8 +1,15 @@
+@import "./variables.scss";
+
 .footer-container {
   display: flex;
   height: 10vh;
-  border: 1px solid black;
+  border-top: 1px solid $secondary-color;
   width: 100%;
   justify-content: center;
   align-items: center;
+  color: $accent-color;
+}
+
+.footer-container h1 {
+  font-size: 1.3rem;
 }

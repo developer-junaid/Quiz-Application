@@ -1,9 +1,14 @@
 .header-container {
   display: flex;
   height: 10vh;
-  border: 1px solid black;
+  border-bottom: 1px solid gray;
   width: 100%;
   justify-content: center;
   align-items: center;
+  color: #ececec;
+}
+
+.header-container h1 {
+  font-size: 1.3rem;
 }
 /*# sourceMappingURL=header.css.map */
