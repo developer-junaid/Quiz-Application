@@ -2,7 +2,7 @@
 
 .footer-container {
   display: flex;
-  height: 10vh;
+  height: 8vh;
   border-top: 1px solid $secondary-color;
   width: 100%;
   justify-content: center;
@@ -11,5 +11,6 @@
 }
 
 .footer-container h1 {
-  font-size: 1.3rem;
+  font-size: 1rem;
+  font-variant: initial;
 }

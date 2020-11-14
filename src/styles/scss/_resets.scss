@@ -10,6 +10,9 @@
 body {
   min-height: 100vh;
   width: 100%;
-  background-image: url("./../../images/black-laptop.jpg");
+  // background-image: url("./../../images/black-laptop.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)),
+    url("./../../images/hand.jpg");
   background-size: cover;
+  background-position: bottom;
 }

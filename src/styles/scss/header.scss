@@ -2,8 +2,9 @@
 
 .header-container {
   display: flex;
-  height: 10vh;
-  border-bottom: 1px solid $secondary-color;
+  height: 8vh;
+  flex-direction: row;
+  // border-bottom: 1px solid $accent-color;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -11,5 +12,9 @@
 }
 
 .header-container h1 {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 1px gray;
+  font-variant: initial;
+  // margin-right: 2rem;
+  font-weight: 900;
 }

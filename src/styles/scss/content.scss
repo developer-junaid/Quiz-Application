@@ -2,7 +2,7 @@
 
 .content-container {
   display: flex;
-  height: 90vh;
+  height: 94vh;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -10,5 +10,6 @@
 }
 
 .content-container h1 {
-  font-size: 1.3rem;
+  font-size: 1rem;
+  font-variant: initial;
 }
