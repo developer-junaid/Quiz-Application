@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "Source Sans";
+  src: local(serif), url("./../fonts/SourceSansPro-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Source Sans", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.main-container {
+  height: 100vh;
+  width: 100%;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/*# sourceMappingURL=main.css.map */

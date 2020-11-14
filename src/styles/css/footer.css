@@ -1,0 +1,9 @@
+.footer-container {
+  display: flex;
+  height: 10vh;
+  border: 1px solid black;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+/*# sourceMappingURL=footer.css.map */
