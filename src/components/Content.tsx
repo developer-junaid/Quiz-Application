@@ -1,10 +1,11 @@
 import React from 'react';
 import './../styles/css/content.css';
+import Input from './Input';
 
 const Content = () => {
     return(
         <div className='content-container' >
-            <h1>Content</h1>
+            <Input/>
         </div>
     )
 }
