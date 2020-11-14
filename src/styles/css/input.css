@@ -1,1 +1,66 @@
-/* No CSS *//*# sourceMappingURL=input.css.map */
+.input-container {
+  width: 50%;
+  background: #d2d4dd;
+  height: 70%;
+  display: flex;
+  box-shadow: 2px 2px 1px #0b0e10e5;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.input-container h1 {
+  color: #0b0e10e5;
+  font-size: 1.3rem;
+  width: 100%;
+  padding: 0.8rem;
+}
+
+.question-form {
+  width: 100%;
+  padding: 0.5rem;
+  text-align: left;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.questions-dropdown {
+  margin: 1rem;
+  width: 80%;
+  height: 2rem;
+}
+
+.form-control {
+  background: #d2d4dd !important;
+}
+
+.form-label {
+  color: #0b0e10e5 !important;
+}
+
+.select {
+  width: 100%;
+}
+
+.submit-btn {
+  margin-top: 1rem;
+  padding: 1rem;
+  outline: none;
+  border: 1px solid gray;
+  background: #0b0e10e5;
+  width: 50%;
+  color: rgba(255, 255, 255, 0.959);
+  font-size: 20px;
+  transition: 0.3s ease-in-out;
+  align-self: center;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: rgba(145, 104, 28, 0.89);
+}
+/*# sourceMappingURL=input.css.map */

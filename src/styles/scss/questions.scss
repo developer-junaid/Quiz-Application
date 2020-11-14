@@ -1,0 +1,74 @@
+@import "./variables";
+
+.questions-container {
+  width: 50%;
+  background: $accent-color;
+  height: 82%;
+  display: flex;
+  box-shadow: 2px 2px 1px $primary-color;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.questions-container h1 {
+  color: $primary-color;
+  font-size: 1.3rem;
+  text-align: center;
+  width: 100%;
+  padding: 1.2rem;
+}
+
+.questions-container h3 {
+  color: $primary-color;
+  padding: 0.9rem 2rem;
+  font-size: 1.1em;
+  text-align: left;
+}
+
+.question-form {
+  width: 100%;
+  padding: 0.5rem;
+  text-align: left;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: left;
+  flex-direction: column;
+}
+
+.questions-dropdown {
+  margin: 1rem;
+  width: 80%;
+  height: 2rem;
+}
+
+.form-control {
+  background: $accent-color !important;
+}
+
+.form-label {
+  color: $primary-color !important;
+  margin-left: 2rem !important;
+}
+
+.select {
+  width: 100%;
+}
+
+.submit-btn {
+  padding: 1rem;
+  outline: none;
+  border: 1px solid gray;
+  background: $primary-color;
+  width: 50%;
+  color: rgba(255, 255, 255, 0.959);
+  font-size: 20px;
+  transition: 0.3s ease-in-out;
+  align-self: center;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: $secondary-color;
+}

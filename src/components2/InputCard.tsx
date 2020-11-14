@@ -15,7 +15,7 @@ const InputCard: React.FC<inputPropsType> = ({
   setLevel,
   callback,
 }) => {
-  return (
+  return ( 
     <div className="input-card-container">
       <div className='configuration-heading'>Select configurations</div>
       <div className="select">
