@@ -14,13 +14,13 @@
 body {
   min-height: 100vh;
   width: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url("./../../images/hand.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url("./../../images/hand.jpg");
   background-size: cover;
-  background-position: bottom;
+  background-position: center;
 }
 
 .main-container {
-  height: 110vh;
+  height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;

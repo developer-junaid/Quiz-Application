@@ -1,8 +1,8 @@
 .footer-container {
   display: flex;
   height: 8vh;
-  border-top: 1px solid gray;
-  width: 100%;
+  border-top: 1px solid rgba(145, 104, 28, 0.89);
+  width: 80%;
   justify-content: center;
   align-items: center;
   color: #d2d4dd;

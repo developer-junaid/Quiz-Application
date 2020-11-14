@@ -4,7 +4,7 @@ import './../styles/css/footer.css';
 const Footer = () => {
     return(
         <div className='footer-container' >
-            <h1>Footer</h1>
+            <h1>Developed by : Junaid Qureshi</h1>
         </div>
     )
 }

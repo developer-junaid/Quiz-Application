@@ -2,10 +2,10 @@
   display: flex;
   height: 8vh;
   flex-direction: row;
-  width: 100%;
+  width: 24%;
+  border-bottom: 1px solid rgba(145, 104, 28, 0.89);
   justify-content: center;
   align-items: center;
-  color: #d2d4dd;
 }
 
 .header-container h1 {
@@ -13,5 +13,6 @@
   text-shadow: 1px 1px 1px gray;
   font-variant: initial;
   font-weight: 900;
+  color: #d2d4dd;
 }
 /*# sourceMappingURL=header.css.map */

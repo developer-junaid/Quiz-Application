@@ -4,8 +4,9 @@
   display: flex;
   height: 8vh;
   border-top: 1px solid $secondary-color;
-  width: 100%;
+  width: 80%;
   justify-content: center;
+  // border-radius: 60% 60% 60% 60%;
   align-items: center;
   color: $accent-color;
 }
