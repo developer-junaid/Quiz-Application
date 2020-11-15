@@ -55,7 +55,11 @@ const Content = () => {
 
   // Loading
   if (!quiz.length) {
-    return <Loader />
+    return (
+      <div className="content-container">
+        <Loader />
+      </div>
+    )
   }
 
   if (showResult) {
