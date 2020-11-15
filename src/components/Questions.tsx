@@ -1,5 +1,10 @@
 import React, { useState } from "react"
-import {  FormControl,  FormControlLabel,  RadioGroup,  Radio} from "@material-ui/core"
+import {
+  FormControl,
+  FormControlLabel,
+  RadioGroup,
+  Radio,
+} from "@material-ui/core"
 import { questionPropsType } from "./../types/quiz_types"
 import "./../styles/css/questions.css"
 
@@ -12,11 +17,6 @@ const Questions: React.FC<questionPropsType> = ({
 }) => {
   // Answer state
   let [selectedAns, setSelectedAns] = useState("")
-
-  // Handle Selection
-  const handleSelect = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setSelectedAns(event.target.value)
-  }
 
   // Radio
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -46,7 +46,7 @@ const Questions: React.FC<questionPropsType> = ({
                 <div key={index}>
                   <FormControlLabel
                     value={option}
-                    className='form-label'
+                    className="form-label"
                     control={<Radio required={true} />}
                     label={option}
                   />
