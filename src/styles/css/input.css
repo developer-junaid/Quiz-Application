@@ -92,7 +92,7 @@
   }
 }
 
-@media (max-height: 650px) and (max-width: 1000px) {
+@media (max-height: 750px) and (max-width: 1000px) {
   .input-container {
     width: 80vw;
     min-height: 80%;
