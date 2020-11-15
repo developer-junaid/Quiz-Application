@@ -1,12 +1,38 @@
 const CACHE_NAME = "quizApplicationCache"
 
 const filesToCache = [
+  "/static/media/hand_mobile.jpg",
+  "/static/media/hand_mobile.8e00ea14.jpg",
+  "/static/media/SourceSansPro-Regular.c1678b46.ttf",
+
   "/",
   "index.html",
   "manifest.json",
-  "https://pro.fontawesome.com/releases/v5.10.0/css/all.css",
-  "/static/media/hand_mobile.jpg",
-  "/quiz2.svg",
+
+  "/static/js/main.chunk.js",
+  "/static/js/bundle.js",
+  "/static/js/1.chunk.js",
+
+  "/web-fonts/css/all.min.css",
+
+  "/static/media/SourceSansPro-Regular.ttf",
+
+  "/images/quiz.svg",
+
+  "/images/icon-192x192.png",
+
+  "https://fonts.googleapis.com/icon?family=Material+Icons",
+
+  "/web-fonts/webfonts/fa-solid-900.woff2",
+  "/web-fonts/webfonts/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7l.woff2",
+  "/web-fonts/webfonts/fa-brands-400.woff2",
+  "/web-fonts/web-fonts/webfonts/fa-brands-400.ttf",
+  "/web-fonts/web-fonts/webfonts/fa-solid-900.ttf",
+  "/web-fonts/web-fonts/webfonts/fa-brands-400.woff",
+  "/web-fonts/web-fonts/webfonts/fa-solid-900.woff",
+  "/web-fonts/web-fonts/webfonts/fa-brands-400.woff2",
+  "/src/styles/fonts/SourceSansPro-Regular.ttf",
+  "/web-fonts/web-fonts/webfonts/fa-solid-900.woff2",
 ]
 
 // Install SW
