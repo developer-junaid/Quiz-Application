@@ -1,19 +1,19 @@
-import { Quiz, QuestionType } from "../types/quiz_types"
+import { Quiz, QuestionType } from "../types/quiz_types";
 
 // Shuffle Answers functions
-const shuffleAnswers = (array: any[]) =>  [...array].sort(() => Math.random() - 0.5)
+const shuffleAnswers = (array: any[]) =>
+  [...array].sort(() => Math.random() - 0.5);
 
 // Get Data from API
-export const getQuizDetails = async (totalQuestions: number,category: number,level: string): Promise<QuestionType[]> => {
-  
+export const getQuizDetails = async (
+  totalQuestions: number,
+  category: number,
+  level: string
+): Promise<QuestionType[]> => {
   const response = await fetch(
     `https://opentdb.com/api.php?amount=${totalQuestions}&category=${category}&difficulty=${level}&type=multiple`
-  )
-
-
-  console.log(response)
-  let { results } = await response.json()
-  
+  );
+  let { results } = await response.json();
   const quiz: QuestionType[] = results.map((questionObj: Quiz) => {
     return {
       question: questionObj.question,
@@ -21,8 +21,7 @@ export const getQuizDetails = async (totalQuestions: number,category: number,lev
       options: shuffleAnswers(
         questionObj.incorrect_answers.concat(questionObj.correct_answer)
       ),
-    }
-  })
-  
-  return quiz
-}
+    };
+  });
+  return quiz;
+};

@@ -13,6 +13,7 @@ const filesToCache = [
   "/static/js/bundle.js",
   "/static/js/1.chunk.js",
   "/static/js/0.chunk.js",
+  "/static/js/main.chunk.js.map",
 
   "/web-fonts/css/all.min.css",
 
