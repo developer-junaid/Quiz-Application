@@ -24,6 +24,7 @@
 
 .icons-container i {
   font-size: 1.7rem;
+  color: #d2d4dd;
   transition: 0.3s ease-in-out;
 }
 
@@ -31,26 +32,21 @@
   text-decoration: none;
 }
 
-.icons-container i:hover {
-  transform: translateY(-2px);
-  box-shadow: 1px 1px 6px gray;
-}
-
-.github {
+.github:hover {
   color: black;
-  background: #d2d4dd;
-  line-height: 0.8;
+  background: white;
+  border-radius: 2px;
 }
 
-.linkedin {
+.linkedin:hover {
   color: #0e76a8;
-  line-height: 0.7;
-  background: #d2d4dd;
+  background: white;
+  border-radius: 2px;
 }
 
-.portfolio {
-  line-height: 0.7;
+.portfolio:hover {
+  background: white;
+  border-radius: 2px;
   color: #00630a;
-  background: #d2d4dd;
 }
 /*# sourceMappingURL=footer.css.map */

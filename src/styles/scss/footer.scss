@@ -26,6 +26,7 @@
 
 .icons-container i {
   font-size: 1.7rem;
+  color: $accent-color;
   transition: 0.3s ease-in-out;
 }
 
@@ -33,27 +34,20 @@
   text-decoration: none;
 }
 
-.icons-container i:hover {
-  transform: translateY(-2px);
-  box-shadow: 1px 1px 6px gray;
+.github:hover {
+  color: rgb(0, 0, 0);
+  background: white;
+  border-radius: 2px;
 }
 
-.github {
-  color: black;
-  background: $accent-color;
-  line-height: 0.8;
-}
-
-.linkedin {
+.linkedin:hover {
   color: #0e76a8;
-  line-height: 0.7;
-
-  background: $accent-color;
+  background: white;
+  border-radius: 2px;
 }
 
-.portfolio {
-  line-height: 0.7;
-
+.portfolio:hover {
+  background: white;
+  border-radius: 2px;
   color: #00630a;
-  background: $accent-color;
 }
