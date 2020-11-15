@@ -27,4 +27,12 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+@media (max-height: 650px) and (max-width: 1000px) {
+  .main-container {
+    min-height: 100vh;
+    max-height: 110vh;
+    height: 110vh;
+  }
+}
 /*# sourceMappingURL=main.css.map */

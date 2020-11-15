@@ -58,12 +58,24 @@ const Input: React.FC<inputPropsType> = ({
               required
               label="Category"
             >
-              <MenuItem value={9}>General Knowledge</MenuItem>
-              <MenuItem value={11}>Movies</MenuItem>
-              <MenuItem value={17}>Science</MenuItem>
-              <MenuItem value={18}>Computers</MenuItem>
-              <MenuItem value={19}>Mathematics</MenuItem>
-              <MenuItem value={21}>Sports</MenuItem>
+              <MenuItem className="form-menu-item" value={9}>
+                General Knowledge
+              </MenuItem>
+              <MenuItem className="form-menu-item" value={11}>
+                Movies
+              </MenuItem>
+              <MenuItem className="form-menu-item" value={17}>
+                Science
+              </MenuItem>
+              <MenuItem className="form-menu-item" value={18}>
+                Computers
+              </MenuItem>
+              <MenuItem className="form-menu-item" value={19}>
+                Mathematics
+              </MenuItem>
+              <MenuItem className="form-menu-item" value={21}>
+                Sports
+              </MenuItem>
             </Select>
           </FormControl>
         </div>

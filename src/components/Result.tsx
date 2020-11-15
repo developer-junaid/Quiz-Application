@@ -4,7 +4,7 @@ import { resultPropsType } from "./../types/quiz_types"
 
 const Result: React.FC<resultPropsType> = ({
   score,
-  name,
+  name, 
   total,
   category,
   level,

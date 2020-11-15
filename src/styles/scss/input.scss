@@ -52,14 +52,14 @@
 }
 
 .submit-btn {
-  margin-top: 1rem;
-  padding: 1rem;
+  margin-top: 1rem !important;
+  padding: 1rem !important;
   outline: none;
   border: 1px solid gray;
   background: $primary-color;
   width: 50%;
   color: rgba(255, 255, 255, 0.959);
-  font-size: 20px;
+  font-size: 1rem !important;
   transition: 0.3s ease-in-out;
   align-self: center;
   cursor: pointer;
@@ -67,4 +67,40 @@
 
 .submit-btn:hover {
   background: $secondary-color;
+}
+
+@media (max-width: $mobile) {
+  .input-container {
+    width: 80vw;
+    height: 80%;
+  }
+
+  .input-container h1 {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+
+  .form-label {
+    font-size: 0.7rem !important;
+  }
+
+  .MuiInputBase-input {
+    font-size: 0.8rem !important;
+  }
+  .MuiSelect-selectMenu {
+    min-height: 0.01rem !important;
+  }
+
+  .submit-btn {
+    width: 35vw !important;
+    padding: 0.5rem !important;
+    font-size: 0.4rem;
+  }
+}
+
+@media (max-height: $mobile-height) and (max-width: $mobile) {
+  .input-container {
+    width: 80vw;
+    min-height: 80%;
+  }
 }

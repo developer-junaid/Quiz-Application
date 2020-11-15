@@ -2,7 +2,7 @@
   display: flex;
   height: 8vh;
   flex-direction: row;
-  width: 24%;
+  width: 20rem;
   border-bottom: 1px solid rgba(145, 104, 28, 0.89);
   justify-content: center;
   align-items: center;

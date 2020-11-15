@@ -22,7 +22,7 @@ const Questions: React.FC<questionPropsType> = ({
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedAns(event.target.value)
   }
-
+ 
   return (
     <div className="questions-container">
       <h1>
@@ -40,6 +40,7 @@ const Questions: React.FC<questionPropsType> = ({
             name="option"
             value={selectedAns}
             onChange={handleChange}
+            className='form-radio-group'
           >
             {options.map((option, index) => {
               return (

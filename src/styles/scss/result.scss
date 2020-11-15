@@ -58,7 +58,7 @@
   background: $primary-color;
   width: 50%;
   color: rgba(255, 255, 255, 0.959);
-  font-size: 20px;
+  font-size: 1rem !important;
   transition: 0.3s ease-in-out;
   align-self: center;
   cursor: pointer;
@@ -66,4 +66,37 @@
 
 .submit-btn:hover {
   background: $secondary-color;
+}
+
+@media (max-width: $mobile) {
+  .result-container {
+    width: 80% !important;
+    height: 60%;
+  }
+
+  .results {
+    padding-left: 1rem;
+    height: 60%;
+  }
+
+  .results span {
+    margin-right: 1rem;
+  }
+
+  .results h3 {
+    font-size: 0.8rem;
+  }
+
+  .submit-btn {
+    width: 50vw !important;
+    padding: 0.6rem !important;
+    font-size: 0.4rem;
+  }
+}
+
+@media (max-height: $mobile-height) and (max-width: $mobile) {
+  .result-container {
+    width: 80vw;
+    min-height: 80%;
+  }
 }
