@@ -37,7 +37,12 @@
   width: 80%;
 }
 
+#outlined-basic-label {
+  color: rgba(28, 24, 24, 0.877) !important;
+}
+
 .form-control {
+  border-color: black !important;
   background: #d2d4dd !important;
 }
 
