@@ -10,7 +10,7 @@ const InputCard: React.FC<inputPropsType> = ({
   questions,
   category,
   setCategory,
-  setQuestions,
+  setQuestions, 
   level,
   setLevel,
   callback,

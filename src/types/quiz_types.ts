@@ -23,6 +23,13 @@ export type questionPropsType = {
   currentQuestion: number;
 };
 
+export type resultPropsType = {
+  category: number, 
+  level: string,
+  total: number,
+  score: number
+}
+
 export type inputPropsType = {
   questions: number;
   category: number;

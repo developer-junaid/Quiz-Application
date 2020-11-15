@@ -17,7 +17,7 @@ function App() {
   let [category, setCategory] = useState(9);
   let [showResult, setShowResult] = useState(false);
   let [inputSubmitted, setInputSubmitted] = useState(false);
-
+ 
   useEffect(() => {
     async function fetchData() {
       const totalQuestions: QuestionType[] = await getQuizDetails(

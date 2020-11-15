@@ -1,0 +1,9 @@
+.loader-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: #d2d4dd;
+}
+/*# sourceMappingURL=loader.css.map */
