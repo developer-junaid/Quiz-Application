@@ -17,6 +17,7 @@ const Content = () => {
   let [category, setCategory] = useState(9)
   let [showResult, setShowResult] = useState(false)
   let [inputSubmitted, setInputSubmitted] = useState(false)
+  let [name, setName] = useState("")
 
   useEffect(() => {
     async function fetchData() {
@@ -66,6 +67,7 @@ const Content = () => {
     return (
       <div className="content-container">
         <Result
+          name={name}
           score={score}
           total={quiz.length}
           level={level}
@@ -87,6 +89,8 @@ const Content = () => {
         />
       ) : (
         <Input
+          setName={setName}
+          name={name}
           questions={questions}
           setQuestions={setQuestions}
           level={level}

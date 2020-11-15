@@ -3,7 +3,7 @@
 .input-container {
   width: 50%;
   background: $accent-color;
-  height: 70%;
+  height: 90%;
   display: flex;
   box-shadow: 2px 2px 1px $primary-color;
   flex-direction: column;
@@ -25,15 +25,18 @@
   text-align: left;
   height: 90%;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
 }
 
-.questions-dropdown {
-  margin: 1rem;
+.form-text-field {
   width: 80%;
-  height: 2rem;
+  margin: 0 auto !important;
+}
+
+.questions-dropdown {
+  width: 80%;
 }
 
 .form-control {

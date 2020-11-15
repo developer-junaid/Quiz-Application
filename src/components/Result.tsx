@@ -4,6 +4,7 @@ import { resultPropsType } from "./../types/quiz_types"
 
 const Result: React.FC<resultPropsType> = ({
   score,
+  name,
   total,
   category,
   level,
@@ -29,14 +30,35 @@ const Result: React.FC<resultPropsType> = ({
 
   return (
     <div className="result-container">
-      <div className="heading">  <h1>Your Result</h1></div>
+      <div className="heading">
+        {" "}
+        <h1>Your Result</h1>
+      </div>
       <div className="results">
-        <h3>  Name                 <span>Junaid </span></h3>
-        <h3>  Total Questions      <span>{total}</span></h3>
-        <h3>  Score                <span>{score}</span></h3>
-        <h3>  Percentage           <span>{(score / total) * 100}%</span></h3>
-        <h3>  Difficulty Level     <span>{level}</span></h3>
-        <h3>  Category             <span>{categoryString}</span></h3>
+        <h3>
+          {" "}
+          Name <span>{name} </span>
+        </h3>
+        <h3>
+          {" "}
+          Total Questions <span>{total}</span>
+        </h3>
+        <h3>
+          {" "}
+          Score <span>{score}</span>
+        </h3>
+        <h3>
+          {" "}
+          Percentage <span>{(score / total) * 100}%</span>
+        </h3>
+        <h3>
+          {" "}
+          Difficulty Level <span>{level}</span>
+        </h3>
+        <h3>
+          {" "}
+          Category <span>{categoryString}</span>
+        </h3>
       </div>
       <div className="button">
         <input

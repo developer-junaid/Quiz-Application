@@ -1,7 +1,13 @@
 import React from "react"
 import "./../styles/css/input.css"
 import { inputPropsType } from "./../types/quiz_types"
-import { FormControl, InputLabel, Select, MenuItem } from "@material-ui/core"
+import {
+  TextField,
+  FormControl,
+  InputLabel,
+  Select,
+  MenuItem,
+} from "@material-ui/core"
 
 const Input: React.FC<inputPropsType> = ({
   questions,
@@ -11,6 +17,8 @@ const Input: React.FC<inputPropsType> = ({
   level,
   setLevel,
   callback,
+  name,
+  setName,
 }) => {
   return (
     <div className="input-container">
@@ -22,6 +30,17 @@ const Input: React.FC<inputPropsType> = ({
           callback(e, questions, level)
         }
       >
+        <FormControl className="form-control" variant="outlined" fullWidth>
+          <TextField
+            className="form-text-field"
+            required
+            id="outlined-basic"
+            label="Your Name"
+            variant="outlined"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+        </FormControl>
         <div className="questions-dropdown">
           <FormControl className="form-control" variant="outlined" fullWidth>
             <InputLabel
