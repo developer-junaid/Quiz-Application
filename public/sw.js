@@ -1,68 +1,60 @@
-// the cache version gets updated every time there is a new deployment
-const CACHE_VERSION = 10
-const CURRENT_CACHE = `main-${CACHE_VERSION}`
+const CACHE_NAME = "quizCache"
+// Version 0.6.5
+self.addEventListener("install", (e) => {
+  console.log("installing service worker!!")
+  const timeStamp = Date.now()
+  e.waitUntil(
+    caches.open(CACHE_NAME).then((cache) => {
+      return cache
+        .addAll([
+          `/`,
+          // `/index.html`,
+          `https://opentdb.com/api.php?amount=5&category=9&difficulty=easy&type=multiple`,
+          `/static/js/bundle.js`,
+        ])
+        .then(() => self.skipWaiting())
+    })
+  )
+})
 
-// these are the routes we are going to cache for offline support
-const cacheFiles = ["/", "/offline/", "manifest.json"]
+self.addEventListener("activate", (event) => {
+  console.log("activating service worker")
+  event.waitUntil(self.clients.claim())
+})
 
-// on activation we clean up the previously registered service workers
-this.addEventListener("activate", (evt) =>
-  evt.waitUntil(
-    caches.keys().then((cacheNames) => {
-      return Promise.all(zz
-        cacheNames.map((cacheName) => {
-          if (cacheName !== CURRENT_CACHE) {
-            return caches.delete(cacheName)
-          }
+self.addEventListener("fetch", function (event) {
+  console.log(`fetching ${event.request.url}`)
+  event.respondWith(
+    caches.match(event.request).then(function (response) {
+      // Cache hit - return response
+      if (response) {
+        return response
+      }
+
+      // IMPORTANT: Clone the request. A request is a stream and
+      // can only be consumed once. Since we are consuming this
+      // once by cache and once by the browser for fetch, we need
+      // to clone the response.
+      var fetchRequest = event.request.clone()
+
+      return fetch(fetchRequest).then(function (response) {
+        // Check if we received a valid response
+        if (!response || response.status !== 200 || response.type !== "basic") {
+          return response
+        }
+
+        // IMPORTANT: Clone the response. A response is a stream
+        // and because we want the browser to consume the response
+        // as well as the cache consuming the response, we need
+        // to clone it so we have two streams.
+        var responseToCache = response.clone()
+
+        caches.open(CACHE_NAME).then(function (cache) {
+          cache.put(event.request, responseToCache)
         })
-      )
+
+        return response
+      })
     })
   )
-)
-
-// on install we download the routes we want to cache for offline
-this.addEventListener("install", (evt) =>
-  evt.waitUntil(
-    caches.open(CURRENT_CACHE).then((cache) => {
-      return cache.addAll(cacheFiles)
-    })
-  )
-)
-
-// fetch the resource from the network
-const fromNetwork = (request, timeout) =>
-  new Promise((fulfill, reject) => {
-    const timeoutId = setTimeout(reject, timeout)
-    fetch(request).then((response) => {
-      clearTimeout(timeoutId)
-      fulfill(response)
-      update(request)
-    }, reject)
-  })
-
-// fetch the resource from the browser cache
-const fromCache = (request) =>
-  caches
-    .open(CURRENT_CACHE)
-    .then((cache) =>
-      cache
-        .match(request)
-        .then((matching) => matching || cache.match("/offline/"))
-    )
-
-// cache the current page to make it available for offline
-const update = (request) =>
-  caches
-    .open(CURRENT_CACHE)
-    .then((cache) =>
-      fetch(request).then((response) => cache.put(request, response))
-    )
-
-// general strategy when making a request (eg if online try to fetch it
-// from the network with a timeout, if something fails serve from cache)
-this.addEventListener("fetch", (evt) => {
-  evt.respondWith(
-    fromNetwork(evt.request, 10000).catch(() => fromCache(evt.request))
-  )
-  evt.waitUntil(update(evt.request))
 })
