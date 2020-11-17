@@ -1,14 +1,8 @@
-@font-face {
-  font-family: "Source Sans";
-  src: local(serif), url("./../fonts/SourceSansPro-Regular.ttf") format("truetype");
-  font-display: swap;
-}
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Source Sans", sans-serif;
+  font-family: sans-serif;
 }
 
 body {

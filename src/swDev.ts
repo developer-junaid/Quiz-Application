@@ -1,5 +1,5 @@
 export default function swDev() {
-  let swDev = `${process.env.PUBLIC_URL}/serviceworker.js`
+  let swDev = `${process.env.PUBLIC_URL}/sw.js`
   if ("serviceWorker" in navigator) {
     window.addEventListener("load", () => {
       navigator.serviceWorker

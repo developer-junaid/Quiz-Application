@@ -44,14 +44,15 @@ const Input: React.FC<inputPropsType> = ({
         <div className="questions-dropdown">
           <FormControl className="form-control" variant="outlined" fullWidth>
             <InputLabel
+              aria-label="category-label"
               className="form-label"
-              id="demo-simple-select-outlined-label"
+              id="demo-simple-select-outlined-label-category"
             >
               Category
             </InputLabel>
             <Select
-              labelId="demo-simple-select-outlined-label"
-              id="demo-simple-select-outlined"
+              labelId="demo-simple-select-outlined-label-category"
+              id="demo-simple-select-outlined-category"
               value={category}
               defaultValue={category}
               onChange={(event) => setCategory(Number(event.target.value))}
@@ -83,13 +84,13 @@ const Input: React.FC<inputPropsType> = ({
           <FormControl className="form-control" variant="outlined" fullWidth>
             <InputLabel
               className="form-label"
-              id="demo-simple-select-outlined-label"
+              id="demo-simple-select-outlined-label-questions"
             >
               Questions
             </InputLabel>
             <Select
-              labelId="demo-simple-select-outlined-label"
-              id="demo-simple-select-outlined"
+              labelId="demo-simple-select-outlined-label-questions"
+              id="demo-simple-select-outlined-questions"
               value={questions}
               onChange={(event) => setQuestions(Number(event.target.value))}
               required
@@ -106,13 +107,13 @@ const Input: React.FC<inputPropsType> = ({
           <FormControl className="form-control" variant="outlined" fullWidth>
             <InputLabel
               className="form-label"
-              id="demo-simple-select-outlined-label"
+              id="demo-simple-select-outlined-label-difficulty"
             >
               Difficulty
             </InputLabel>
             <Select
-              labelId="demo-simple-select-outlined-label"
-              id="demo-simple-select-outlined"
+              labelId="demo-simple-select-outlined-label-difficulty"
+              id="demo-simple-select-outlined-difficulty"
               value={level}
               onChange={(event) => setLevel(event.target.value as string)}
               required

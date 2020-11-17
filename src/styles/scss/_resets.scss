@@ -1,11 +1,9 @@
-@import "./fonts";
 @import "./variables";
 
 $mobile-image: "./../../images/hand_mobile.jpg";
 $pc-image: "./../../images/hand.jpg";
 
 @mixin backgroundChange($device) {
-  // background-position: center;
   @if ($device == "mobile") {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
       url($mobile-image);
@@ -25,7 +23,7 @@ $pc-image: "./../../images/hand.jpg";
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Source Sans", sans-serif;
+  font-family: sans-serif;
 }
 
 body {

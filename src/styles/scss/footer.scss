@@ -16,38 +16,11 @@
   font-variant: initial;
 }
 
-.icons-container {
-  display: flex;
-  width: 8rem;
-  height: 60%;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-.icons-container i {
-  font-size: 1.5rem;
-  color: $accent-color;
-  transition: 0.3s ease-in-out;
-}
-
-.icons-container a {
+.footer-container a {
   text-decoration: none;
+  color: $secondary-color;
 }
 
-.github:hover {
-  color: rgb(0, 0, 0);
-  background: white;
-  border-radius: 2px;
-}
-
-.linkedin:hover {
-  color: #0e76a8;
-  background: white;
-  border-radius: 2px;
-}
-
-.portfolio:hover {
-  background: white;
-  border-radius: 2px;
-  color: #00630a;
+.footer-container a:hover {
+  color: $accent-color;
 }

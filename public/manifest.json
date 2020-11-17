@@ -6,6 +6,8 @@
   "name": "Online Quiz Application",
   "app_name": "Online Quiz Application",
   "short_name": "Quiz App",
+  "description": "Online Quiz Application also a PWA, build using ReactJs",
+
   "icons": [
     {
       "src": "/images/icon-192x192.png",
@@ -27,7 +29,6 @@
       "sizes": "512x512",
       "type": "image/png"
     },
-
     {
       "src": "./images/maskable/icon-192x192.png",
       "sizes": "192x192",
