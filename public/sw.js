@@ -1,12 +1,12 @@
 // the cache version gets updated every time there is a new deployment
-const CACHE_VERSION = 10
-const CURRENT_CACHE = `main-${CACHE_VERSION}`
+const CURRENT_CACHE = "quiz"
+const self = this
 
 // these are the routes we are going to cache for offline support
-const cacheFiles = ["/", "/offline/", "manifest.json"]
+const cacheFiles = ["/", "/offline/"]
 
 // on activation we clean up the previously registered service workers
-this.addEventListener("activate", (evt) =>
+self.addEventListener("activate", (evt) =>
   evt.waitUntil(
     caches.keys().then((cacheNames) => {
       return Promise.all(
@@ -21,7 +21,7 @@ this.addEventListener("activate", (evt) =>
 )
 
 // on install we download the routes we want to cache for offline
-this.addEventListener("install", (evt) =>
+self.addEventListener("install", (evt) =>
   evt.waitUntil(
     caches.open(CURRENT_CACHE).then((cache) => {
       return cache.addAll(cacheFiles)
@@ -60,7 +60,7 @@ const update = (request) =>
 
 // general strategy when making a request (eg if online try to fetch it
 // from the network with a timeout, if something fails serve from cache)
-this.addEventListener("fetch", (evt) => {
+self.addEventListener("fetch", (evt) => {
   evt.respondWith(
     fromNetwork(evt.request, 10000).catch(() => fromCache(evt.request))
   )
