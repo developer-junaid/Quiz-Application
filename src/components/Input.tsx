@@ -12,11 +12,11 @@ import {
 const Input: React.FC<inputPropsType> = ({
   questions,
   category,
+  setSendRequest,
   setCategory,
   setQuestions,
   level,
   setLevel,
-  callback,
   name,
   setName,
 }) => {
@@ -26,9 +26,10 @@ const Input: React.FC<inputPropsType> = ({
       <form
         className="question-form"
         action=""
-        onSubmit={(e: React.FormEvent<EventTarget>) =>
-          callback(e, questions, level)
-        }
+        onSubmit={(e: React.FormEvent<EventTarget>) => {
+          e.preventDefault()
+          setSendRequest(true)
+        }}
       >
         <FormControl className="form-control" variant="outlined" fullWidth>
           <TextField

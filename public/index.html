@@ -5,10 +5,7 @@
     <link rel="icon" href="./images/quiz.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Online Quiz Application and a PWA, using ReactJs"
-    />
+    <meta name="description" content="Online Quiz Application and a PWA, using ReactJs" />
     <link rel="apple-touch-icon" href="./images/icon-192x192.png" />
     <link rel="manifest" href="./manifest.json" />
     <title>Quiz Application</title>
@@ -16,16 +13,5 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <script>
-      if ("serviceWorker" in navigator) {
-        navigator.serviceWorker
-          .register("/sw.js", { scope: "/" })
-          .then((reg) => console.log("Registered Service worker: ", reg.scope))
-
-        navigator.serviceWorker.ready.then((resp) => {
-          console.log("Service worker ready")
-        })
-      }
-    </script>
   </body>
 </html>

@@ -29,6 +29,17 @@ export type resultPropsType = {
   total: number
   name: string
   score: number
+
+  setCategory: React.Dispatch<React.SetStateAction<number>>
+  setStep: React.Dispatch<React.SetStateAction<number>>
+  setScore: React.Dispatch<React.SetStateAction<number>>
+  setQuestions: React.Dispatch<React.SetStateAction<number>>
+  setLevel: React.Dispatch<React.SetStateAction<string>>
+  setName: React.Dispatch<React.SetStateAction<string>>
+ 
+  setShowResult: React.Dispatch<React.SetStateAction<Boolean>>
+  setQuiz: React.Dispatch<React.SetStateAction<QuestionType[]>>
+  setSendRequest: React.Dispatch<React.SetStateAction<Boolean>>
 }
 
 export type inputPropsType = {
@@ -38,11 +49,8 @@ export type inputPropsType = {
   setQuestions: (questions: number) => void
   level: string
   name: string
+  setSendRequest: React.Dispatch<React.SetStateAction<Boolean>>
+
   setName: (name: string) => void
   setLevel: (level: string) => void
-  callback: (
-    e: React.FormEvent<EventTarget>,
-    questions: number,
-    level: string
-  ) => void
 }

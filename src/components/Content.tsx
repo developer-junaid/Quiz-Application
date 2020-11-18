@@ -10,27 +10,38 @@ import { getQuizDetails } from "./../services/quiz_service"
 const Content = () => {
   // Quiz State
   let [quiz, setQuiz] = useState<QuestionType[]>([])
-  let [step, setStep] = useState(0)
-  let [score, setScore] = useState(0)
-  let [questions, setQuestions] = useState(5)
-  let [level, setLevel] = useState("easy")
-  let [category, setCategory] = useState(9)
-  let [showResult, setShowResult] = useState(false)
-  let [inputSubmitted, setInputSubmitted] = useState(false)
-  let [name, setName] = useState("")
+  let [step, setStep] = useState<number>(0)
+  let [score, setScore] = useState<number>(0)
+  let [questions, setQuestions] = useState<number>(5)
+  let [level, setLevel] = useState<string>("easy")
+  let [category, setCategory] = useState<number>(9)
+  let [showResult, setShowResult] = useState<Boolean>(false)
+  let [name, setName] = useState<string>("")
+  let [gettingData, setGettingData] = useState<Boolean>(false)
+
+  //to stop sening initial request to api
+  const [sendRequest, setSendRequest] = useState<Boolean>(false)
 
   useEffect(() => {
-    async function fetchData() {
-      const totalQuestions: QuestionType[] = await getQuizDetails(
-        questions,
-        category,
-        level
-      )
-      setQuiz(totalQuestions)
-    }
-    fetchData()
-  }, [questions, category, level])
+    const fetchData = async () => {
+      if (sendRequest) {
+        console.log("getting data ...")
+        setGettingData(true)
 
+        const totalQuestions: QuestionType[] = await getQuizDetails(
+          questions,
+          category,
+          level
+        )
+
+        console.log("got data !!")
+        setGettingData(false)
+        setQuiz(totalQuestions)
+      }
+    }
+
+    fetchData()
+  }, [sendRequest, questions, category, level])
   // Create handleSubmit function
   const handleSubmit = (e: React.FormEvent<EventTarget>, userAns: string) => {
     e.preventDefault()
@@ -48,14 +59,8 @@ const Content = () => {
     }
   }
 
-  // Create handleInputSubmit function
-  const handleInputSubmit = (e: React.FormEvent<EventTarget>) => {
-    e.preventDefault()
-    setInputSubmitted(true)
-  }
-
   // Loading
-  if (!quiz.length) {
+  if (gettingData) {
     return (
       <div className="content-container">
         <Loader />
@@ -63,33 +68,42 @@ const Content = () => {
     )
   }
 
-  if (showResult) {
-    return (
-      <div className="content-container">
-        <Result
-          name={name}
-          score={score}
-          total={quiz.length}
-          level={level}
-          category={category}
-        />
-      </div>
-    )
-  }
-
+  //  RETURN
   return (
     <div className="content-container">
-      {inputSubmitted ? (
-        <Questions
-          options={quiz[step].options}
-          question={quiz[step].question}
-          callback={handleSubmit}
-          totalQuestions={quiz.length}
-          currentQuestion={step}
-        />
+      {quiz.length ? (
+        !showResult ? (
+          <Questions
+            options={quiz[step].options}
+            question={quiz[step].question}
+            callback={handleSubmit}
+            totalQuestions={quiz.length}
+            currentQuestion={step}
+          />
+        ) : (
+          <Result
+            // Data
+            name={name}
+            score={score}
+            total={quiz.length}
+            level={level}
+            category={category}
+            // Functions
+            setName={setName}
+            setScore={setScore}
+            setQuestions={setQuestions}
+            setCategory={setCategory}
+            setLevel={setLevel}
+            setStep={setStep}
+            setQuiz={setQuiz}
+            setSendRequest={setSendRequest}
+            setShowResult={setShowResult}
+          />
+        )
       ) : (
         <Input
           setName={setName}
+          setSendRequest={setSendRequest}
           name={name}
           questions={questions}
           setQuestions={setQuestions}
@@ -97,7 +111,6 @@ const Content = () => {
           category={category}
           setCategory={setCategory}
           setLevel={setLevel}
-          callback={handleInputSubmit}
         />
       )}
     </div>

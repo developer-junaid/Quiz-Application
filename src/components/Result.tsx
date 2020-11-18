@@ -3,15 +3,34 @@ import "./../styles/css/result.css"
 import { resultPropsType } from "./../types/quiz_types"
 
 const Result: React.FC<resultPropsType> = ({
+  // Data
   score,
-  name, 
+  name,
   total,
   category,
   level,
+  // Functions
+  setScore,
+  setStep,
+  setLevel,
+  setCategory,
+  setName,
+  setQuestions,
+  setShowResult,
+  setQuiz,
+  setSendRequest,
 }) => {
   // Handle Try again
   const handleTryAgain = () => {
-    window.location.reload()
+    setShowResult(false)
+    setSendRequest(false)
+    setQuiz([])
+    setScore(0)
+    setStep(0)
+    setLevel("easy")
+    setCategory(9)
+    setName("")
+    setQuestions(5)
   }
 
   let categoryString = ""
