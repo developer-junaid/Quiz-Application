@@ -5,7 +5,7 @@ var urlsToCache = [
   "/static/js/1.chunk.js",
   "manifest.json",
   "https://opentdb.com/api_category.php",
-  // "/static/js/0.chunk.js",
+  "/static/js/0.chunk.js",
   "index.html",
   "/",
 ]
