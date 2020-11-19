@@ -3,10 +3,10 @@
   "background_color": "#ffffff",
   "display": "standalone",
   "start_url": ".",
-  "name": "Online Quiz Application",
-  "app_name": "Online Quiz Application",
+  "name": "Our Quiz Application",
+  "app_name": "Our Quiz Application",
   "short_name": "Quiz App",
-  "description": "Online Quiz Application also a PWA, build using ReactJs",
+  "description": "A Quiz Application also a PWA, build using ReactJs",
 
   "icons": [
     {
