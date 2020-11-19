@@ -1,0 +1,14 @@
+.content-container {
+  display: flex;
+  height: 90vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  color: #d2d4dd;
+}
+
+.content-container h1 {
+  font-size: 1rem;
+  font-variant: initial;
+}
+/*# sourceMappingURL=content.css.map */

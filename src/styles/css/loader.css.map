@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,iBAAiB,CAAC;EAChB,KAAK,ECFQ,OAAO;CDGrB",
+    "sources": [
+        "../scss/loader.scss",
+        "../scss/_variables.scss"
+    ],
+    "names": [],
+    "file": "loader.css"
+}

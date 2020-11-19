@@ -1,0 +1,106 @@
+.input-container {
+  width: 50%;
+  background: #d2d4dd;
+  height: 90%;
+  display: flex;
+  box-shadow: 2px 2px 1px #0b0e10e5;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.input-container h1 {
+  color: #0b0e10e5;
+  font-size: 1.3rem;
+  width: 100%;
+  padding: 0.8rem;
+}
+
+.question-form {
+  width: 100%;
+  padding: 0.5rem;
+  text-align: left;
+  height: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form-text-field {
+  width: 80%;
+  margin: 0 auto !important;
+}
+
+.questions-dropdown {
+  width: 80%;
+}
+
+#outlined-basic-label {
+  color: rgba(28, 24, 24, 0.877) !important;
+}
+
+.form-control {
+  border-color: black !important;
+  background: #d2d4dd !important;
+}
+
+.form-label {
+  color: #0b0e10e5 !important;
+}
+
+.select {
+  width: 100%;
+}
+
+.submit-btn {
+  margin-top: 1rem !important;
+  padding: 1rem !important;
+  outline: none;
+  border: 1px solid gray;
+  background: #0b0e10e5;
+  width: 50%;
+  color: rgba(255, 255, 255, 0.959);
+  font-size: 1rem !important;
+  transition: 0.3s ease-in-out;
+  align-self: center;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: rgba(145, 104, 28, 0.89);
+}
+
+@media (max-width: 1000px) {
+  .input-container {
+    width: 80vw;
+    height: 80%;
+  }
+  .input-container h1 {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+  .form-label {
+    font-size: 0.7rem !important;
+  }
+  .MuiInputBase-input {
+    font-size: 0.8rem !important;
+  }
+  .MuiSelect-selectMenu {
+    min-height: 0.01rem !important;
+  }
+  .submit-btn {
+    width: 35vw !important;
+    padding: 0.5rem !important;
+    font-size: 0.4rem;
+  }
+}
+
+@media (max-height: 750px) and (max-width: 1000px) {
+  .input-container {
+    width: 80vw;
+    min-height: 80%;
+  }
+}
+/*# sourceMappingURL=input.css.map */

@@ -1,0 +1,125 @@
+.questions-container {
+  width: 50%;
+  background: #d2d4dd;
+  height: 82%;
+  display: flex;
+  box-shadow: 2px 2px 1px #0b0e10e5;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.questions-container h1 {
+  color: #0b0e10e5;
+  font-size: 1.3rem;
+  text-align: center;
+  width: 100%;
+  padding: 1.2rem;
+}
+
+.questions-container h3 {
+  color: #0b0e10e5;
+  padding: 0.9rem 2rem;
+  font-size: 1.1em;
+  text-align: left;
+}
+
+.question-form {
+  width: 100%;
+  padding: 0.5rem;
+  text-align: left;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: left;
+  flex-direction: column;
+}
+
+.form-radio-group {
+  width: 25vw !important;
+}
+
+.questions-dropdown {
+  margin: 1rem;
+  width: 80%;
+  height: 2rem;
+}
+
+.form-control {
+  background: #d2d4dd !important;
+}
+
+.form-label {
+  color: #0b0e10e5 !important;
+}
+
+.MuiTypography-body1 {
+  font-weight: 600 !important;
+  font-family: "Source Sans", sans-serif !important;
+  font-size: 0.9rem !important;
+}
+
+.select {
+  width: 100%;
+}
+
+.submit-btn {
+  margin-top: 1rem !important;
+  padding: 1rem !important;
+  outline: none;
+  border: 1px solid gray;
+  background: #0b0e10e5;
+  width: 50%;
+  color: rgba(255, 255, 255, 0.959);
+  font-size: 1rem !important;
+  transition: 0.3s ease-in-out;
+  align-self: center;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: rgba(145, 104, 28, 0.89);
+}
+
+@media (max-width: 1000px) {
+  .questions-container {
+    width: 80% !important;
+    height: 60%;
+  }
+  .form-radio-group {
+    width: 50vw !important;
+  }
+  .questions-container h1 {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+  .MuiTypography-body1 {
+    font-size: 0.7rem !important;
+  }
+  .questions-container h3 {
+    font-size: 0.8rem;
+    padding: 1rem 2rem;
+  }
+  .form-label {
+    font-size: 0.7rem !important;
+  }
+  .MuiInputBase-input {
+    font-size: 0.8rem !important;
+  }
+  .MuiSelect-selectMenu {
+    min-height: 0.01rem !important;
+  }
+  .submit-btn {
+    width: 50vw !important;
+    padding: 0.8rem !important;
+    font-size: 0.4rem;
+  }
+}
+
+@media (max-height: 750px) and (max-width: 1000px) {
+  .questions-container {
+    width: 80vw;
+    min-height: 80%;
+  }
+}
+/*# sourceMappingURL=questions.css.map */

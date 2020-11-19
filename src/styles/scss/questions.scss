@@ -1,0 +1,134 @@
+@import "./variables";
+
+.questions-container {
+  width: 50%;
+  background: $accent-color;
+  height: 82%;
+  display: flex;
+  box-shadow: 2px 2px 1px $primary-color;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.questions-container h1 {
+  color: $primary-color;
+  font-size: 1.3rem;
+  text-align: center;
+  width: 100%;
+  padding: 1.2rem;
+}
+
+.questions-container h3 {
+  color: $primary-color;
+  padding: 0.9rem 2rem;
+  font-size: 1.1em;
+  text-align: left;
+}
+
+.question-form {
+  width: 100%;
+  padding: 0.5rem;
+  text-align: left;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: left;
+  flex-direction: column;
+}
+
+.form-radio-group {
+  width: 25vw !important;
+}
+
+.questions-dropdown {
+  margin: 1rem;
+  width: 80%;
+  height: 2rem;
+}
+
+.form-control {
+  background: $accent-color !important;
+}
+
+.form-label {
+  color: $primary-color !important;
+}
+
+.MuiTypography-body1 {
+  font-weight: 600 !important;
+  font-family: "Source Sans", sans-serif !important;
+  font-size: 0.9rem !important;
+}
+
+.select {
+  width: 100%;
+}
+
+.submit-btn {
+  margin-top: 1rem !important;
+  padding: 1rem !important;
+  outline: none;
+  border: 1px solid gray;
+  background: $primary-color;
+  width: 50%;
+  color: rgba(255, 255, 255, 0.959);
+  font-size: 1rem !important;
+  transition: 0.3s ease-in-out;
+  align-self: center;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: $secondary-color;
+}
+
+@media (max-width: $mobile) {
+  .questions-container {
+    width: 80% !important;
+    height: 60%;
+  }
+
+  .form-radio-group {
+    width: 50vw !important;
+  }
+
+  .questions-container h1 {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+
+  .MuiTypography-body1 {
+    font-size: 0.7rem !important;
+  }
+
+  .questions-container h3 {
+    font-size: 0.8rem;
+    padding: 1rem 2rem;
+  }
+
+  .form-label {
+    font-size: 0.7rem !important;
+  }
+
+  .MuiInputBase-input {
+    font-size: 0.8rem !important;
+  }
+
+  .MuiSelect-selectMenu {
+    min-height: 0.01rem !important;
+  }
+
+  .submit-btn {
+    width: 50vw !important;
+    padding: 0.8rem !important;
+    font-size: 0.4rem;
+  }
+}
+
+@media (max-height: $mobile-height) and (max-width: $mobile) {
+  .questions-container {
+    width: 80vw;
+    min-height: 80%;
+  }
+}

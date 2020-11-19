@@ -1,0 +1,17 @@
+@import "./variables.scss";
+
+.content-container {
+  display: flex;
+  height: 90vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  color: $accent-color;
+}
+
+.content-container h1 {
+  font-size: 1rem;
+  font-variant: initial;
+}
+
+

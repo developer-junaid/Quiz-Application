@@ -1,11 +1,14 @@
-import React, { useState } from "react";
-import { questionPropsType } from "./../types/quiz_types";
-import Radio from "@material-ui/core/Radio";
-import RadioGroup from "@material-ui/core/RadioGroup";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import FormControl from "@material-ui/core/FormControl";
+import React, { useState } from "react"
+import {
+  FormControl,
+  FormControlLabel,
+  RadioGroup,
+  Radio,
+} from "@material-ui/core"
+import { questionPropsType } from "./../types/quiz_types"
+import "./../styles/css/questions.css"
 
-const QuestionCard: React.FC<questionPropsType> = ({
+const Questions: React.FC<questionPropsType> = ({
   question,
   options,
   callback,
@@ -13,27 +16,19 @@ const QuestionCard: React.FC<questionPropsType> = ({
   currentQuestion,
 }) => {
   // Answer state
-  let [selectedAns, setSelectedAns] = useState("");
-
-  // Handle Selection
-  const handleSelect = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setSelectedAns(event.target.value);
-  };
+  let [selectedAns, setSelectedAns] = useState("")
 
   // Radio
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSelectedAns(event.target.value);
-  };
-
+    setSelectedAns(event.target.value)
+  }
+ 
   return (
-    <div className="question-container ">
-      <div className="progress-bar">
-        Question: {++currentQuestion} / {totalQuestions}
-      </div>
-      <div className="question">
-        <h3>{question}</h3>
-      </div>
-
+    <div className="questions-container">
+      <h1>
+        Questions: {++currentQuestion} / {totalQuestions}
+      </h1>
+      <h3>{question}</h3>
       <form
         className="question-form"
         action=""
@@ -45,19 +40,19 @@ const QuestionCard: React.FC<questionPropsType> = ({
             name="option"
             value={selectedAns}
             onChange={handleChange}
+            className='form-radio-group'
           >
             {options.map((option, index) => {
               return (
                 <div key={index}>
                   <FormControlLabel
                     value={option}
+                    className="form-label"
                     control={<Radio required={true} />}
                     label={option}
                   />
-
-                  {/* <input  onChange={handleSelect} /> */}
                 </div>
-              );
+              )
             })}
           </RadioGroup>
         </FormControl>
@@ -68,7 +63,7 @@ const QuestionCard: React.FC<questionPropsType> = ({
         />
       </form>
     </div>
-  );
-};
+  )
+}
 
-export default QuestionCard;
+export default Questions

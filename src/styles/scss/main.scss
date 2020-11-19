@@ -1,0 +1,19 @@
+@import "./resets";
+@import './variables';
+
+.main-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-height: $mobile-height) and (max-width: $mobile) {
+  .main-container {
+    min-height: 100vh;
+    max-height: 110vh;
+    height: 110vh;
+  }
+}
