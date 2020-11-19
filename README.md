@@ -1,43 +1,54 @@
-# :clipboard: Online Quiz Application 
+# Our Quiz - Web Application
 
-### *An Online Quiz Application, built using React js and Typescript.*
-:link: http://online-quiz-app.surge.sh/
+### On PC
 
-### Demo Video
-:link: https://youtu.be/zOIvO_rgMlo
+<img src="./projectImages/pc.png"/>
 
+### On Mobile
 
-## Images 
-<img src='./projectImages/1.png' />
-<img src='./projectImages/2.png' />
+<img src="./projectImages/mobile.png"/>
 
+### Lighthouse Performance Testing Result
 
+<img src="./projectImages/lighthouse.png"/>
 
+### link : http://our-quiz.web.app/
+
+### Youtube Video (Demo) :
+
+### _A Quiz Progressive Web Application built using ReactJs, Typescript. You can install it on your devices (Mobile, Desktop) and can use it offline_
+
+## Functionalities
+
+- Select Quiz Settings
+- Perform Quiz and Get Results
+
+## PWA Functionalities
+
+- You can install it on PC, Mobile
+- Offline availablity
 
 ## Features
 
-- Select Questions 
-- Select Difficulty level
-- Select Category
-- Give Quiz
-- See Results
-- Try Again
-- Mobile Responsive
-- Form Validation
+- Secure
 - Accessibility Optimized
+- Fast
+- Less in size
+- SEO Optimized
+- Mobile Responsive
 
-## Run Locally 
+## Run Locally
 
 - Run this command `git clone https://github.com/developer-junaid/Quiz-Application.git`
-- You are now in the dev environment and you can play around 
+- You are now in the dev environment and you can play around
 
 ## Tech Stack
 
 - HTML5
 - CSS3
-- Javascript ES6
-- React js
-- Typescript (beta)
-- API
-- Surge
-- Github Actions
+- Sass
+- Javascript +ES6
+- React Js
+- Typescript
+- Service Workers
+- Firebase hosting
