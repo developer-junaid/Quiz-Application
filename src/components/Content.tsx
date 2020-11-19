@@ -24,6 +24,7 @@ const Content = () => {
 
   useEffect(() => {
     const fetchData = async () => {
+      // const dummyResponse = await fetch("https://opentdb.com/api.php?amount=5&category=9&difficulty=easy&type=multiple")
       if (sendRequest) {
         console.log("getting data ...")
         setGettingData(true)

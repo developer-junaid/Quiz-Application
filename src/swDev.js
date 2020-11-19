@@ -1,7 +1,7 @@
 export const register = () => {
   if ("serviceWorker" in navigator) {
     window.addEventListener("load", function () {
-      navigator.serviceWorker.register("/sw.js").then(
+      navigator.serviceWorker.register("/sw3.js").then(
         function (registration) {
           // Registration was successful
           console.log(
