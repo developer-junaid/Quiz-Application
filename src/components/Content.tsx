@@ -25,7 +25,6 @@ const Content = () => {
   useEffect(() => {
     const fetchData = async () => {
       if (sendRequest) {
-        console.log("getting data ...")
         setGettingData(true)
 
         const totalQuestions: QuestionType[] = await getQuizDetails(
@@ -34,7 +33,6 @@ const Content = () => {
           level
         )
 
-        console.log("got data !!")
         setGettingData(false)
         setQuiz(totalQuestions)
       }
